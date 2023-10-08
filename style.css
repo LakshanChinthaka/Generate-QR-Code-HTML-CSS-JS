@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;0,900;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-famil; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #262a2f;
+}
+
+.container{
+    width: 450px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    background: #fff;
+    transform: translate(-50%,-50%);
+}
+
+P{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
+    align-items: center;
+    color: #606062;
+}
+
+.container input{
+    width: 100%;
+    height: 50%;
+    border: 3px solid #494eea;
+    outline: 0; /*remove border*/
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+input::placeholder {
+    font-size: 16px; 
+}
+
+button{
+    width: 100%;
+    height: 50%;
+    padding: 10px 35px;
+    background: #494eea;
+    color: #f8f6f6;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+button:hover{
+    background: #262a2f;
+}
+
+#imgBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition:  max-height 1s;
+}
+
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+}
+
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10% auto;
+    border: 1px solid #d1d1d1;
+}
+
+/* shake input feild */
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(-2px);
+    }
+    50%{
+        transform: translate(0px);
+    }
+    70%{
+        transform: translate(2px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* Error messgae */
+#error-msg{
+    color: rgb(230, 67, 67);
+}
